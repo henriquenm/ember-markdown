@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" >
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <div class="navbar" >
+      <div class="navbar-inner">
+        <a class="brand" href="#">Markup editor </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="span6" >
+        {{partial 'md'}}
+      </div>
+      <div class="span6" style="border:1px solid black;height:500px;padding:3px;word-break: break-all;">
+        {{format-markdown input}}  
+      </div>
+    </div>
+  </script>
+
+
+  <script type="text/x-handlebars" id="md">
+    {{textarea name="input" value=input placeholder="Enter your markdown here. It will automatically be translated."}}
+  </script>
+
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0.js"></script>
+  <script src="js/libs/ember-1.0.0.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+
+</body>
+</html>
